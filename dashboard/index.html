@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SK hynix 10-Year Financial Dashboard</title><link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script defer src="dashboard.js"></script></head>
+<body><main class="container"><header><p class="eyebrow">DART OPEN API · K-IFRS CONSOLIDATED</p>
+<h1>SK hynix 10-Year Financial Dashboard</h1><p class="subtitle">최근 10개 사업연도의 연결 재무제표 및 재무비율 추이</p></header>
+<section class="controls"><label>시작연도 <select id="startYear"></select></label>
+<label>주요 지표 <select id="metric"><option value="revenue">매출액</option><option value="operating_margin">영업이익률</option><option value="net_margin">순이익률</option><option value="roe">ROE</option><option value="roa">ROA</option><option value="debt_to_equity">부채비율</option><option value="equity_ratio">자기자본비율</option><option value="current_ratio">유동비율</option><option value="cfo">영업현금흐름</option><option value="fcf">FCF</option></select></label></section>
+<section id="kpis" class="kpis"></section><section class="card"><h2 id="chartTitle">10년 추이</h2><canvas id="trendChart"></canvas></section>
+<section class="grid"><article class="card"><h2>수익성</h2><canvas id="profitChart"></canvas></article><article class="card"><h2>재무안정성</h2><canvas id="stabilityChart"></canvas></article>
+<article class="card"><h2>현금흐름</h2><canvas id="cashChart"></canvas></article><article class="card"><h2>성장성</h2><canvas id="growthChart"></canvas></article></section>
+<section class="card"><h2>연도별 데이터</h2><div class="table-wrap"><table id="dataTable"></table></div></section>
+<footer>DART Open API · SK hynix (000660) · 연결재무제표 · 사업보고서<br>ROA/ROE는 평균 자산·평균 자본, FCF = 영업현금흐름 - CAPEX</footer></main></body></html>
